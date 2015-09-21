@@ -7,7 +7,7 @@ public class Arrays {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 int[] bab = {1,3,4,2,1,6,9,0,1,0,0,0,0,0,3,3};
-getDups(bab);
+getUniq(bab);
 	}
 
 	public static void getDups(int[]arr){
@@ -21,5 +21,17 @@ getDups(bab);
 			vals[tmp]=1;
 			
 		}
+	}
+	public static void getUniq(int []arr){
+		int[]boo = new int[256];
+		for(int tmp:arr){
+			boo[tmp]++;
+		}
+		for(int tmp:arr){
+			if(boo[tmp]==1){
+				System.out.println(tmp);
+			}
+		}
+		
 	}
 }
